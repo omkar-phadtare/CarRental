@@ -1,0 +1,64 @@
+# customer table create
+
+create table customer( cId serial primary key , cName varchar(20) not null , cEmail varchar(30) not null , cNo bigint not null, cAadhar bigint not null , cLicenceId varchar(30) , address varchar(20) not null , gender char not null , password varchar(10) not null );
+
+insert into customer( cName , cEmail, cNo , cAadhar, cLicenceId  , address , gender  , password) values('pranay' , 'prannayk.varade@gmail.com' , 6464447780 , 123654789654 , '125UYT15544125O' , 'shaitaan galli' , 'M' , 'oolaalaa');
+
+
+# car table create
+
+create table car(car_no varchar(20) primary key , car_model varchar(20) not null , car_type varchar(20) not null , insurance_id varchar(40) , meter_reading int not null , price int not null);
+
+insert into car values('MH14AB1111' , 'Land Rover' , 'SUV' , 'insurance@suv123' , 3520 , 5000);
+insert into car values('MH14AB2222' , 'WolksWagon Polo' , 'Hatchback' , 'insurance@polo123' , 4000 , 1000);
+insert into car values('MH14AB3333' , 'Mercedees S-class' , 'Sedan' , 'insurance@sclass123' , 300 , 9000);
+insert into car values('MH14AB4444' , 'Wagon-r' , 'Hatchback' , 'insurance@wagonr123' , 30000 , 1000);
+insert into car values('MH14AB5555' , 'Dzire' , 'Sedan' , 'insurance@dzire123' , 7500 , 2000);
+insert into car values('MH14AB6666' , 'Innova' , 'MPV' , 'insurance@innova123' , 6500 , 4000);
+insert into car values('MH14AB7777' , 'Ford Mustang1969' , 'muscle' , 'insurance@mustang123' , 3500 , 10000);
+
+
+
+# driver table create 
+
+create table driver(d_id serial primary key , dname varchar(20) not null, dlicenceid varchar(20)not null , daddress varchar(100) not null, salary int not null,dalloc char);
+
+insert into driver(dname,dlicenceid,daddress,salary,dalloc) values('shubham shinde','LOL1234','wakad',5000,'Y');
+
+
+# Booking table create
+
+create table booking(bid int primary key,cID int,car_no varchar(20),duration int,driver char,foreign key(cID) references customer ON DELETE CASCADE ON UPDATE CASCADE,foreign key(car_no)references car  ON DELETE CASCADE ON UPDATE CASCADE);
+
+
+insert into booking(bid,cID,car_no,duration,driver)values(1,1,'MH14JT5634',5,'Y');
+
+insert into booking(bid,cID,car_no,duration,driver)values(2,2,'MH67AD7682',7,'N');
+
+
+#Payment table create
+
+create table payment(tid varchar(30) primary key,bid int,total int,deposit int,dop date);
+
+insert into payment values(12345,12,7500,3000,'2022-05-09');
+
+
+#Choose_car relation table
+
+create table choose_car(car_no varchar(20),cid int,bid int primary key,foreign key(car_no) references car ON DELETE CASCADE ON UPDATE CASCADE,foreign key(bid) references booking ON DELETE CASCADE ON UPDATE CASCADE,foreign key(cid) references customer ON DELETE CASCADE ON UPDATE CASCADE);
+
+
+insert into choose_car values('MH14JT56150',1,13);
+
+# Admin table create
+
+create table admin(aid int primary key , aname varchar(30) , aemail varchar(30) , apass varchar(20) , designation varchar(30));
+
+insert into admin values(1,'adminbhau','adminbhau@gmail.com','admin@123','CEO');
+
+insert into admin values(2,'venkatesh aiyyar','va@gmail.com','va@123','manager');
+
+
+s
+
+

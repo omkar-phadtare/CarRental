@@ -1,0 +1,53 @@
+<html>
+    <head> 
+        <link rel="stylesheet" href="style.css">
+        <title> Booking </title>
+    </head>
+    <body>
+        <header id="nav_head">
+            <img class="wheel" src="wheel.svg">
+            <h2 class="car_logo"><a href="#">BIG WHEELS</a></h2>
+           
+          <ul class="ul_nav">
+              <li><a href="pageHtml.html">Home</a></li>
+              <li><a href="cars_view.html">Cars</a></li>
+              <li><a href="booking.html">YourBooking</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="edit_prof.html"><img class="person_logo" src="person.svg"> </a></li>
+          </ul>
+        </header> 
+        <h2> You've chosen Wagon-R </h2>
+	<div class="selected_wagonr">
+            
+        </div>
+        
+        <div class="car_details">
+            <h2>Wagon-R</h2><br>   
+            <ul style="list-style-type:disc;">
+             <li>Details:</li>
+             <li>5 Seater</li>
+             <li>21 km/l milage.</li>
+             <li>Modern Features</li>
+             <li>provided insurance</li>
+             <li>Excellent Condition.</li>
+             </ul>
+             <h2 class="priceC">Rs 2000/day</h2>
+             
+            </div>
+             <form action="booking.php" method="post" >
+            <div>
+             <input type="hidden" value="2000" name="price"><br>
+             <input type="hidden" value="MH14AB4444" name="carno"><br>
+
+             <p>Enter number of days</p>
+             <input class="D_count" type="number" name="days" placeholder="0" min="0"><br>
+             
+             <br><p>Driver Cost : 500 /day</p><br>
+                <input type="checkbox" name="driver"> Need Driver<br>
+                <a href="payment.html">
+            <input id="ptp" type="submit" value="Proceed to Payment">
+            </a>
+            </div>
+        </form>
+            </body>
+</html>

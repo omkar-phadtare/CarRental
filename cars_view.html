@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <script>
+        function myFunctio() {
+          var input = document.getElementById("Search");
+          var filter = input.value.toLowerCase();
+          var nodes = document.getElementsByClassName('cars');
+        
+          for (i = 0; i < nodes.length; i++) 
+          {
+            if (nodes[i].innerText.toLowerCase().includes(filter)) {
+              nodes[i].style.display = "block";
+            } else {
+              nodes[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+    <body>
+        <header id="nav_head">
+            <img class="wheel" src="wheel.svg">
+            <h2 class="car_logo"><a href="#">BIG WHEELS</a></h2>
+           
+          <ul class="ul_nav">
+              <li><a href="pageHome.html">Home</a></li>
+              <li><a href="#">Cars</a></li>
+              <li><a href="booking.html">YourBooking</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="edit_prof.html"><img class="person_logo" src="person.svg"> </a></li>
+          </ul>
+        </header> 
+       
+<form class="example" action="action_page.php">
+  <input type="text" id="Search" placeholder="Search.." name="search" onkeyup="myFunctio()" title="Type in a name">
+  <button type="button" onclick="search(document.getElementById('search').value)"><i class="fa fa-search"></i></button>
+</form>
+        <div id="landrover" class="cars">
+	
+            <a href="landrover.html">
+                <div class="landrover">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>Land Rover</h1>
+                   <h4>price : 5000/day</h4>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="polo"  class="cars">
+            <a href="polo.html">
+                <div class="polo">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>VolksWagon Polo</h1>
+                   <h4>price : 1000/day</h4>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="sclass" class="cars">
+            <a href="sclass.html">
+                <div class="sclass">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>Mercedees S-class</h1>
+                   <h4>price : 9000/day</h4>
+                </div>
+            </a>
+        </div>
+
+
+        <div id="wagonr" class="cars">
+            <a href="wagonr.html">
+                <div class="wagonr">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>Wagon-R</h1>
+                   <h4>price : 1000/day</h4>
+                </div>
+            </a>
+        </div>
+
+	 <div id="dzire" class="cars">
+            <a href="dzire.html">
+                <div class="dzire">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>Swift Dzire</h1>
+                   <h4>price : 2000/day</h4>
+                </div>
+            </a>
+        </div>
+
+	<div id="innova" class="cars">
+            <a href="innova.html">
+                <div class="innova">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>Innova Crysta</h1>
+                   <h4>price : 4000/day</h4>
+                </div>
+            </a>
+        </div>
+
+	<div id="mustang" class="cars">
+            <a href="mustang.html">
+                <div class="mustang">
+                
+                </div>
+            
+                <div class="discription">
+                   <h1>Ford Mustang 1969</h1>
+                   <h4>price : 10000/day</h4>
+                </div>
+            </a>
+        </div>
+
+</body>
+</html>

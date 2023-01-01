@@ -1,0 +1,30 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="style.css">  
+    </head>
+    <body class="body_index">
+    <div class="form">
+       
+        <form class="register-form" method="post" action="register.php">
+            <h3 class="reg_title">Register </h3>
+          <input type="text" name="cName" placeholder="name"/>
+          <input type="text" name="cEmail" placeholder="email"/>
+          <input type="text" name="cLicenceId" placeholder="Licence Id"/>
+          <input type="text" name="address" placeholder="address"/>
+          <input type="text" name="cAadhar" placeholder="Aadhar no"/>
+          <input type="text" name="cNo" placeholder="Contact no"/>
+          <input  type="password" name="password" placeholder="password"/>
+          <select name="gender" class="drop_list" required>
+            <option value="none" selected disabled hidden>Select Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
+              <option value="O">Others</option>
+          </select>
+          <div class="signup-button">
+          <input type="submit" onclick="window.location = 'login.html'" value="Signup" name="signup">
+          </div>
+          <p >Already registered? <a class="message" href="login.html">Sign In</a></p>
+        </form>
+        </div>
+        </body>
+</html>
